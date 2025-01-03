@@ -8,24 +8,24 @@ namespace StudentAdministrasjonApp
 {
     internal class Skole
     {
+        public List<Fag> fag {  get; set; }
+        public List<Studenter> student { get; set; }
 
-        public List<Studenter> student = new List<Studenter>
-        {    
-          new Studenter("Daniel", 27, "Programmering", 1),
-          new Studenter("Lars", 29, "Genetikk", 2)
-        };
-
-        public List<Fag> fag = new List<Fag>
+        public Skole()
+        {
+             fag = new List<Fag>
         {
           new Fag(1, "OOP", 10),
           new Fag(2, "DNA forskning", 10),
         };
 
-        public List<Karakterer> karakter = new List<Karakterer>
+         student = new List<Studenter>
         {
-          new Karakterer("4"),
-          new Karakterer("5")
+          new Studenter("Daniel", 27, "Programmering", 1, new List<Fag>{fag[0]}, new List<Karakterer>{new Karakterer(4, fag[0])}),
+          new Studenter("Lars", 29, "Genetikk", 2, new List <Fag> { fag[1]}, new List<Karakterer>{new Karakterer(3, fag[1])})
         };
+
+        }
 
         public void Meny()
         {
@@ -72,9 +72,12 @@ namespace StudentAdministrasjonApp
 
         public void LoopThroughGrades()
         {
-            foreach(Karakterer karakterer in karakter)
+            foreach (Studenter student in student)
             {
-                karakterer.KarakterInfo();
+                foreach (Karakterer karakter in student.karakterer)
+                {
+                    karakter.KarakterInfo();
+                }
 
             }
         }
@@ -83,6 +86,23 @@ namespace StudentAdministrasjonApp
         {
             Meny();
         }
+
+
+
+
+
+
+       
+       
+
+
+
+       
+
+
+
+
+
 
 
 

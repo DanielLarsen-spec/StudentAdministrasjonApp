@@ -8,21 +8,22 @@ namespace StudentAdministrasjonApp
 {
     internal class Karakterer
     {
-        public List<Studenter> Students { get; set; }
-        public List<Fag> fagene {  get; set; }
-        public int KarakterVerdi { get; set; }   
         
-        public Karakterer(string karakterverdi)
+        public Fag fag;
+        public double KarakterVerdi { get; set; }   
+        
+        public Karakterer(double karakterverdi, Fag newFag)
         {
-            Students = new List<Studenter>();
-            fagene = new List<Fag>();
-            KarakterVerdi = 4;
+            fag = newFag;
+             
+            KarakterVerdi = 0;
+            
 
         }
         
         public void KarakterInfo()
         {
-            Console.WriteLine($"Studentinformasjon: {Students}\n Fag: {fagene}\n Karakterverdiene: {KarakterVerdi}\n");
+            Console.WriteLine($"Studentinformasjon: \n Fag: {fag}\n Karakterverdiene: {KarakterVerdi}\n");
         }
         
         
