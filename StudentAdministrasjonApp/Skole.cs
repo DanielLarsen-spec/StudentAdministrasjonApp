@@ -29,6 +29,8 @@ namespace StudentAdministrasjonApp
 
         public void Meny()
         {
+            Console.WriteLine("Velkommen til studentadministrasjonen.\n trykk 1 for studentinfo\n Trykk 2 for faginformasjon\n Trykk 3 for karakterverdi");
+            
             bool inMenu = true;
             while (inMenu) 
             {
@@ -39,10 +41,14 @@ namespace StudentAdministrasjonApp
                 {
                     case 1:
                         LoopThroughStudents();
-                            break;
+                        break;
                     
                     case 2:
                         LoopThroughFag();
+                        break;
+
+                    case 3:
+                        LoopThroughGrades();   
                         break;
 
                 }
@@ -73,17 +79,17 @@ namespace StudentAdministrasjonApp
             }
         }
 
+        public void Run()
+        {
+            Meny();
+        }
+
 
 
 
         
 
 
-
-        public void Run()
-        {
-            Meny();
-        }
 
 
 

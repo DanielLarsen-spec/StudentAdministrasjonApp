@@ -16,15 +16,16 @@ namespace StudentAdministrasjonApp
         {
             Students = new List<Studenter>();
             fagene = new List<Fag>();
-            KarakterVerdi = 0;
+            KarakterVerdi = 4;
 
         }
         
         public void KarakterInfo()
         {
-            Console.WriteLine($"");
+            Console.WriteLine($"Studentinformasjon: {Students}\n Fag: {fagene}\n Karakterverdiene: {KarakterVerdi}\n");
         }
-    
+        
+        
     
     
     
