@@ -16,22 +16,35 @@ namespace StudentAdministrasjonApp
     
         public Studenter(string name, int alder, string studieprogram, int studentid) 
         {
+            
             fagene = new List<Fag>();
-            
-            
-
-
             Navn = name;
             Alder = alder;
             Studieprogram = studieprogram;
             StudentId = studentid;
-        
-        
-        
-        
         }
 
-       
+        public void StudentInfo()
+        {
+            Console.WriteLine($"Studentnavn:{Navn}\n Alder: {Alder}\n Studieprogram: {Studieprogram}\n StudentID: {StudentId}");
+        }
+           
+
+           
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
 
 
 

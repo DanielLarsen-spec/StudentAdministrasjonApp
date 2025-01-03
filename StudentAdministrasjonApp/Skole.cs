@@ -9,87 +9,88 @@ namespace StudentAdministrasjonApp
     internal class Skole
     {
 
+        public List<Studenter> student = new List<Studenter>
+        {    
+          new Studenter("Daniel", 27, "Programmering", 1),
+          new Studenter("Lars", 29, "Genetikk", 2)
+        };
 
-
-
-
-        public void StudentInfo()
+        public List<Fag> fag = new List<Fag>
         {
+          new Fag(1, "OOP", 10),
+          new Fag(2, "DNA forskning", 10),
+        };
 
+        public List<Karakterer> karakter = new List<Karakterer>
+        {
+          new Karakterer("4"),
+          new Karakterer("5")
+        };
 
-            List<Studenter> students = new List<Studenter>();
-            Studenter student1 = new Studenter("Daniel", 27, "Programmering", 1);
-            Studenter student2 = new Studenter("Lars Ronny", 29, "Informatikk", 2);
-            Studenter student3 = new Studenter("Daniel Winther", 30, "Jus", 3);
-            Studenter student4 = new Studenter("Magnus", 28, "Genetikk", 4);
-
-            students.Add(student1);
-            students.Add(student2);
-            students.Add(student3);
-            students.Add(student4);
-            Console.WriteLine("Student oversikt:");
-
-            foreach (Studenter student in students)
+        public void Meny()
+        {
+            bool inMenu = true;
+            while (inMenu) 
             {
-                Console.WriteLine($"Studentens Navn:{student.Navn} Alder: {student.Alder} Studieprogram: {student.Studieprogram} StudentId: {student.StudentId}");
-            }
-        }
+            int userinput = Convert.ToInt32(Console.ReadLine());
+                
 
-        public void FagInfo(List<Fag>fagene)
-        {
-            List<Fag>fag = new List<Fag>();
-
-        }
-
-        public void KarakterInfo(List<Karakterer>karakterer)
-        {
-            List<Karakterer>karakter = new List<Karakterer>();
-        }
-
-        public void SkrivUtInfo()
-        {
-            bool IfTrue = true;
-            Console.WriteLine(" 1.Student overview \n 2.Subject overview \n 3.grades overview");
-            
-            while (IfTrue)
-            { 
-               var userInput = Convert.ToInt32(Console.ReadLine());
-
-                switch (userInput) 
+                switch (userinput) 
                 {
                     case 1:
-                        StudentInfo();    
+                        LoopThroughStudents();
+                            break;
+                    
+                    case 2:
+                        LoopThroughFag();
                         break;
 
-                    case 2:
-
-                
-                
-                
-                
-                
-                
                 }
-            
-            
-            
-            
             }
-               
-        
-        
-        
+        }
+        public void LoopThroughStudents()
+        {
+            foreach(Studenter student in student)
+            {
+                student.StudentInfo();
+            }
+        }
+
+        public void LoopThroughFag()
+        {
+            foreach(Fag fag in fag)
+            {
+                fag.FagInfo();
+            }
+        }
+
+        public void LoopThroughGrades()
+        {
+            foreach(Karakterer karakterer in karakter)
+            {
+                karakterer.KarakterInfo();
+
+            }
         }
 
 
 
+
+        
 
 
 
         public void Run()
         {
-            SkrivUtInfo();
+            Meny();
+        }
 
+
+
+
+
+
+            
         
         
         
@@ -98,7 +99,6 @@ namespace StudentAdministrasjonApp
    
         
 
-        }
 
 
 

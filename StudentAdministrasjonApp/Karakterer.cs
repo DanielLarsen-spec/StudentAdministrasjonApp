@@ -19,7 +19,11 @@ namespace StudentAdministrasjonApp
             KarakterVerdi = 0;
 
         }
-    
+        
+        public void KarakterInfo()
+        {
+            Console.WriteLine($"");
+        }
     
     
     

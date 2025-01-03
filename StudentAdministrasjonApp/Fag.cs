@@ -19,6 +19,11 @@ namespace StudentAdministrasjonApp
             AntallStudiePoeng = antallstudiepoeng;
         }
 
+        public void FagInfo()
+        {
+            Console.WriteLine($"Fagkode:{FagKode}\n  Fagnavn: {Fagnavn}\n  Antall studiepoeng: {AntallStudiePoeng}\n ");
+        }
+
       
             
         
