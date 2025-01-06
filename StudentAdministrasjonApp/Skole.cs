@@ -21,7 +21,7 @@ namespace StudentAdministrasjonApp
          student = new List<Studenter>
         {
           new Studenter("Daniel", 27, "Programmering", 1, new List<Fag>{fag[0]}, new List<Karakterer>{new Karakterer(4, fag[0])}),
-          new Studenter("Lars", 29, "Genetikk", 2, new List <Fag> { fag[1]}, new List<Karakterer>{new Karakterer(3, fag[1])})
+          new Studenter("Lars", 29, "Genetikk", 2, new List <Fag> { fag[1]}, new List<Karakterer>{new Karakterer(5, fag[1])})
 
         };
 
@@ -34,7 +34,7 @@ namespace StudentAdministrasjonApp
             while (inMenu) 
             {
             
-                Console.WriteLine("Velkommen til studentadministrasjonen.\n trykk 1 for studentinfo\n Trykk 2 for faginformasjon\n Trykk 3 for karakterverdi");
+                Console.WriteLine("Velkommen til studentadministrasjonen.\n trykk 1 for studentinfo\n Trykk 2 for faginformasjon\n Trykk 3 for karakterverdi\n Trykk 4 for å starte på nytt.");
                 int userinput = Convert.ToInt32(Console.ReadLine());
                 
 
@@ -51,11 +51,14 @@ namespace StudentAdministrasjonApp
                     case 3:
                         LoopThroughGrades();   
                         break;
+                    
+                    case 4:
+                        Console.Clear();
+                        break;
                 }
-                Console.Clear();
             }
-
         }
+
         private void LoopThroughStudents()
         {
             foreach(Studenter student in student)
