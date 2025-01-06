@@ -29,11 +29,21 @@ namespace StudentAdministrasjonApp
         
         public void StudentInfo()
         {
-            Console.WriteLine($"Studentnavn:{Navn}\n Alder: {Alder}\n Studieprogram: {Studieprogram}\n StudentID: {StudentId}");
+            Console.WriteLine($"Studentnavn:{Navn}\n Alder: {Alder}\n Studieprogram: {Studieprogram}\n StudentID: {StudentId} \n");
         }
             
-            
-           
+              
+        public void PrintGrades()
+        {
+          
+            foreach(var karakter in karakterer)
+            {
+                Console.WriteLine(Navn);
+                Console.WriteLine(karakter.KarakterVerdi);
+                Console.WriteLine(karakter.fag.Fagnavn);
+            }
+
+        }
        
 
 

@@ -8,9 +8,9 @@ namespace StudentAdministrasjonApp
 {
     internal class Fag
     {
-       int FagKode {  get; set; }
-       string Fagnavn { get; set; }
-       int AntallStudiePoeng { get; set; }
+      public int FagKode {  get; set; }
+      public string Fagnavn { get; set; }
+      public int AntallStudiePoeng { get; set; }
         
         public Fag(int fagkode, string fagnavn, int antallstudiepoeng) 
         {

@@ -16,7 +16,7 @@ namespace StudentAdministrasjonApp
         {
             fag = newFag;
              
-            KarakterVerdi = 0;
+            KarakterVerdi = karakterverdi;
             
 
         }
