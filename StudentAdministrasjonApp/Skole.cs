@@ -26,13 +26,13 @@ namespace StudentAdministrasjonApp
          student = new List<Studenter>
         {
           new Studenter("Daniel", 27, "Programmering", 1, new List<Fag>{fag[0]}, new List<Karakterer>{new Karakterer(4, fag[0])}),
-          new Studenter("Daniel", 27, "Programmering", 1, new List<Fag>{fag[3]}, new List<Karakterer>{new Karakterer(4, fag[3])}),
-          new Studenter("Daniel", 27, "Programmering", 1, new List<Fag>{fag[0]}, new List<Karakterer>{new Karakterer(4, fag[4])}),
+          new Studenter("Daniel", 27, "Programmering", 1, new List<Fag>{fag[3]}, new List<Karakterer>{new Karakterer(4, fag[2])}),
+          new Studenter("Daniel", 27, "Programmering", 1, new List<Fag>{fag[0]}, new List<Karakterer>{new Karakterer(4, fag[3])}),
           
              
              
           new Studenter("Lars", 29, "Genetikk", 2, new List <Fag> { fag[1]}, new List<Karakterer>{new Karakterer(5, fag[1])}),
-          new Studenter("Lars", 29, "Genetikk", 2, new List <Fag> { fag[1]}, new List<Karakterer>{new Karakterer(5, fag[2])}),
+          new Studenter("Lars", 29, "Genetikk", 2, new List <Fag> { fag[1]}, new List<Karakterer>{new Karakterer(5, fag[4])}),
           new Studenter("Lars", 29, "Genetikk", 2, new List <Fag> { fag[1]}, new List<Karakterer>{new Karakterer(5, fag[5])})
 
         };
