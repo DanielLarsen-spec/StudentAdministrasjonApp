@@ -11,10 +11,8 @@ namespace StudentAdministrasjonApp
         public AddSubject(List<Fag>fag) 
         {
             SubjectAdder(fag);
-        
         }
-    
-    
+        
         public void SubjectAdder(List<Fag> fag)
         {
             Console.Clear();
@@ -33,16 +31,7 @@ namespace StudentAdministrasjonApp
                 SubjectAdder(fag);
             }
             fag.Add(new Fag(fagKode, subjectName, StudyPoints));
-
-
-
         }
-    
-    
-    
-    
-    
-    
-    
     }
 }
+
