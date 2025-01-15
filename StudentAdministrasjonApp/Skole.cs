@@ -10,7 +10,7 @@ namespace StudentAdministrasjonApp
     {
         public List<Fag> fag {  get; set; }
         public List<Studenter> student { get; set; }
-
+        public List<AddSubject> addSubjects { get; set; }
         public Skole()
         {
              fag = new List<Fag>
@@ -45,7 +45,7 @@ namespace StudentAdministrasjonApp
             bool inMenu = true;
             while (inMenu) 
             {
-            
+                
                 Console.WriteLine("Velkommen til studentadministrasjonen.\n trykk 1 for studentinfo\n Trykk 2 for faginformasjon\n Trykk 3 for karakterverdi\n Trykk 4 for å starte på nytt.");
                 int userinput = Convert.ToInt32(Console.ReadLine());
                 
@@ -53,20 +53,27 @@ namespace StudentAdministrasjonApp
                 switch (userinput) 
                 {
                     case 1:
+                        Console.Clear();
                         LoopThroughStudents();
                         break;
                     
                     case 2:
+                        Console.Clear();
                         LoopThroughFag();
                         break;
 
                     case 3:
+                        Console.Clear();
                         LoopThroughGrades();   
                         break;
                     
                     case 4:
-                        Console.Clear();
+                        
+                    
+                    case 5:
+                        System.Environment.Exit(0);
                         break;
+                    
                 }
             }
         }
