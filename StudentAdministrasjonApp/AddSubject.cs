@@ -13,7 +13,7 @@ namespace StudentAdministrasjonApp
             SubjectAdder(fag);
         }
         
-        public void SubjectAdder(List<Fag> fag)
+        public static void SubjectAdder(List<Fag>fag)
         {
             Console.Clear();
             int fagKode;
@@ -21,14 +21,14 @@ namespace StudentAdministrasjonApp
             int StudyPoints;
             Console.WriteLine("Legg til ett eller flere fag.");
             Console.WriteLine("Skriv inn fagkoden til faget");
-            fagKode = Convert.ToInt32(Console.ReadLine);
+            fagKode = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Skriv inn navnet på faget");
             subjectName = Console.ReadLine();
             Console.WriteLine("Skriv inn antall studiepoeng for faget");
             StudyPoints = Convert.ToInt32(Console.ReadLine());
             if (fagKode == 0 || subjectName == "" || StudyPoints == 0) 
             {
-                SubjectAdder(fag);
+                return;
             }
             fag.Add(new Fag(fagKode, subjectName, StudyPoints));
         }
